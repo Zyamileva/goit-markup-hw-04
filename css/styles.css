@@ -387,7 +387,7 @@ img {
     font-weight: 700;
     line-height: 1.11;
     letter-spacing: 0.03em;
-    padding-bottom: 72px;
+    margin-bottom: 72px;
 }
 
 .section-five-list {
@@ -411,11 +411,13 @@ img {
     justify-content: center;
     align-items: center;
     color: var(--lightslate);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.section-five-link.hover, .section-five-link.focus {
-border-color: var(--ocean);
-color: var(--ocean);
+.section-five-link:hover, .section-five-link:focus {
+    border-color: var(--ocean);
+    color: var(--ocean);
 }
 
 .section-five-img {
@@ -608,7 +610,8 @@ color: var(--ocean);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.box:hover .overlay-text, .box:focus .overlay-text {
+.portfolio-item-link:hover .overlay-text,
+.portfolio-item-link:focus .overlay-text {
     transform: translateY(0%);
 }
 
